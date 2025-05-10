@@ -3,6 +3,52 @@ body .bottom_bar{
     z-index: 1;
 }
 
+.top-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 37px;
+    margin: 25px 8px 30px;
+    flex-wrap: nowrap
+}
+
+.top-buttons button {
+    background: none;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    font-size: 12px;
+    color: #3b3b3b;
+    width: 70px; 
+    text-align: center;
+}
+
+.icon-circle {
+    width: 70px;
+    aspect-ratio: 1 / 1; 
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 5px;
+}
+
+.icon-circle img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.container {
+    max-width: 400px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+
 .back_img{
     width: 17px;
     margin-top: auto;
@@ -28,11 +74,11 @@ body .bottom_bar{
 }
 
 .title_text{
-    font-size: 18px;
+    font-size: 19px;
     color: #3b3c41;
     text-align: center;
     width: 100%;
-    font-weight: bold;
+    font-weight: 550; 
     margin-top: auto;
     margin-bottom: auto;
     height: max-content;
@@ -122,7 +168,7 @@ body .bottom_bar{
 
 .bottom_text{
     font-size: 18px;
-    font-weight: bold;
+    font-weight: 500;
     margin-top: auto;
     margin-bottom: auto;
     margin-left: 17px;
@@ -235,6 +281,7 @@ body .bottom_bar{
     width: 95%;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 20px;
 }
 
 .back_text{
@@ -279,8 +326,10 @@ body .bottom_bar{
 
 .bottom_holder{
     position: relative;
-    width: 100%;
-    height: 80px;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 90px;
     background-color: white;
     box-shadow: var(--shadow);
     border-radius: 15px;
@@ -291,13 +340,14 @@ body .bottom_bar{
 }
 
 .info_holder .bottom_grid{
-    height: 70px;
+    height: 90px;
+    
 }
 
 .info_holder{
     height: unset;
     transition: 200ms;
-    max-height: 70px;
+    max-height: 90px;
 }
 
 .additional_holder{
@@ -310,7 +360,7 @@ body .bottom_bar{
 
 .info_holder .action_arrow{
     rotate: 90deg;
-    top: 27px;
+    top: 37px;
     bottom: auto;
 }
 
@@ -548,4 +598,76 @@ body .bottom_bar{
 .page_3_open .page_3{
     bottom: 0;
 }
+
+.custom-card {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 20px 23px;
+    width: 95%;
+    margin: 10px auto;
+    box-shadow: var(--shadow);
+    box-sizing: border-box;
+    height: auto;
+    overflow: visible;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Poppins", sans-serif;
+}
+.field {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.field:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.field label {
+    font-size: 14px;
+    color: #666666;
+    display: block;
+    margin-bottom: 5px;
+    
+}
+
+.field strong {
+    font-size: 17px;
+    display: block;
+    color: #000000;
+    font-weight: 500;
+}
+
+
+.value-copy {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+}
+
+.value-copy button {
+    color: #014a93;
+    background-color: #dbeaf9;
+    width: max-content;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 14px;
+    font-weight: 600;
+    height: 32px;
+    margin-top: -13px;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: -3px;
+    border-radius: 20px;
+    border: none;
+}
+
+.value-copy button:hover {
+    background-color: #dbeaf9;
+}
+
+
 

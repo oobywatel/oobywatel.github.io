@@ -1,11 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 :root{
-    --main-color: rgb(41, 41, 41);
-    --error-color: rgb(206, 29, 29);
+    --main-color: rgb(255, 255, 255);
+    --error-color: #bb0000;
 }
 
-/**Styling**/
 
 .warning{
     width: 90%;
@@ -13,27 +12,9 @@
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 70px;
-    font-size: 13px;
+    font-size: 12px;
 }
 
-.discord{
-    margin-bottom: 50px;
-    cursor: pointer;
-    position: relative;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    height: 50px;
-    background-color: #0d93ec;
-    border-radius: 10px;
-    transition: 200ms;
-    margin-top: -5px;
-    box-shadow: 0px 0px 20px rgb(153, 153, 153);
-}
-
-.discord:hover{
-    opacity: 0.5;
-}
 
 .inner_grid{
     position: absolute;
@@ -51,23 +32,6 @@
     margin-right: auto;
 }
 
-.discord_text{
-    margin-top: auto;
-    margin-bottom: auto;
-    color: white;
-    height: max-content;
-    font-size: 20px;
-    font-weight: 600;
-    text-align: center;
-    line-height: 50px;
-}
-
-.discord_image{
-    width: 30px;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-right: 10px;
-}
 
 html{
     scroll-behavior: smooth;
@@ -100,7 +64,7 @@ html{
     text-align: left;
     font-size: 15px;
     font-weight: 600;
-    color: var(--main-color);
+    color: white;
     opacity: 0.5;
 }
 
@@ -125,7 +89,7 @@ input::-webkit-inner-spin-button {
     margin-top: -5px;
     margin-bottom: 30px;
     max-height: 45px;
-    border: 2px solid rgb(138, 138, 138);
+    border: 2px solid #ffffff;
     width: 90%;
     margin-left: auto;
     margin-right: auto;
@@ -135,7 +99,7 @@ input::-webkit-inner-spin-button {
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    transition: 200ms;
+    transition: 500ms;
 }
 
 .selected_grid{
@@ -152,15 +116,16 @@ input::-webkit-inner-spin-button {
 }
 
 .selected_arrow{
-    width: 25px;
+    width: 20px;
     margin-top: auto;
     margin-bottom: auto;
     margin-right: 0px;
     margin-left: auto;
     transform: translateY(1000px);
+    transform: rotate(90deg);
     filter: drop-shadow(0px -1000px var(--main-color));
-    opacity: 0.5;
-    transition: 200ms;
+    opacity: 1;
+    transition: 300ms;
 }
 
 .selector_box:hover{
@@ -184,7 +149,7 @@ input::-webkit-inner-spin-button {
     font-weight: 600;
     height: max-content;
     color: var(--main-color);
-    opacity: 0.5;
+    opacity: 0.7;
 }
 
 .date{
@@ -219,7 +184,7 @@ input::-webkit-inner-spin-button {
     text-align: left;
     width: 100%;
     line-height: 45px;
-    color: var(--main-color);
+    color: white;
     opacity: 0.5;
     font-weight: 600;
     transition: 200ms;
@@ -234,17 +199,29 @@ input::-webkit-inner-spin-button {
     width: 100%;
     text-align: center;
     border-radius: 10px;
-    border: 2px solid rgb(138, 138, 138);
+    border: 2px solid #000000;
     font-weight: bold;
     text-align: center;
     font-size: 15px;
-    color: rgb(138, 138, 138);
+    color: rgb(53, 53, 53);
 }
 
 .date_input::placeholder{
     font-weight: bold;
     text-align: center;
     color: rgb(138, 138, 138);
+}
+
+.input,
+.date_input,
+.classic_input {
+    background-color: #000000;
+    color: #ffffff;
+    border-color: rgb(255, 255, 255);
+}
+
+::placeholder {
+    color: #ffffff;
 }
 
 .arrow{
@@ -302,14 +279,33 @@ input::-webkit-inner-spin-button {
     cursor: pointer;
 }
 
-.logo{
-    width: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    margin-top: 80px;
-    border-radius: 10px;
+.logo_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 90%;
+    max-width: 1200px;
+    margin-top: 70px;
+    margin-bottom: 70px;
 }
+
+.logo {
+    width: 85px;
+    border-radius: 15px;
+    margin-right: 30px;
+    box-shadow: 0px 0px 25px #ff5454;
+}
+
+.logo_text {
+    font-weight: bold;
+    font-size: 32px;
+    color: #ffffff;
+    margin: 0;
+    text-align: left;
+}
+
 
 .subtext{
     color: var(--main-color);
@@ -323,27 +319,38 @@ input::-webkit-inner-spin-button {
 
 *{
     font-family: "Poppins", sans-serif;
+     margin: 0;
+    padding: 0;
+     box-sizing: border-box;
 }
 
-body{
-    background-color: white;
+html, body {
+  height: 100%;
+  background-color: black; 
+  color: white;
+  padding-top: env(safe-area-inset-top);
+}
+
+* {
+    color: #ffffff;
 }
 
 .go{
-    width: 90%;
-    box-shadow: 0px 0px 20px rgb(153, 153, 153);
+    width: 60%;
+    box-shadow: 0px 0px 25px #ff5454;
     height: 50px;
-    background-color: white;
+    background-color: #dd153c;
     border-radius: 10px;
     margin-left: auto;
     margin-right: auto;
     display: block;
     margin-top: 30px;
-    font-size: 20px;
+    font-size: 22px;
+    color: #ffffff;
     font-weight: 600;
     cursor: pointer;
-    transition: 200ms;
-    margin-bottom: 20px;
+    transition: 500ms;
+    margin-bottom: 25px;
     text-align: center;
     line-height: 50px;
 }
@@ -352,16 +359,6 @@ body{
     opacity: 0.5;
 }
 
-.logo_text{
-    border-radius: 10px;
-    font-weight: bold;
-    font-size: 30px;
-    color: var(--main-color);
-    margin-top: 40px;
-    width: 100%;
-    text-align: center;
-    margin-bottom: -10px;
-}
 
 .classic_input{
     color: white;
@@ -414,8 +411,8 @@ input:focus{
     outline: none;
     font-weight: bold;
     height: 50px;
-    font-size: 17px;
-    transition: 200ms;
+    font-size: 18px;
+    transition: 400ms;
     color: var(--main-color);
 }
 
@@ -433,7 +430,7 @@ input:focus{
 
 .error{
     color: var(--error-color);
-    font-size: 15px;
+    font-size: 14px;
     font-weight: bold;
     position: absolute;
     top: 40px;
@@ -470,8 +467,8 @@ input:focus{
 }
 
 .upload{
-    box-shadow: 0px 0px 20px rgb(153, 153, 153);
-    height: 200px;
+    box-shadow: 0px 0px 28px #b6b6b6;
+    height: 100px;
     width: 90%;
     margin-left: auto;
     margin-right: auto;
@@ -480,7 +477,7 @@ input:focus{
     margin-top: 20px;
     position: relative;
     cursor: pointer;
-    transition: 200ms;
+    transition: 500ms;
 }
 
 .upload_uploading{
@@ -496,7 +493,7 @@ input:focus{
 }
 
 .upload_text{
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
     height: max-content;
     margin-top: auto;
@@ -505,7 +502,7 @@ input:focus{
 }
 
 .upload_image{
-    width: 100px;
+    width: 80px;
     margin-left: auto;
     margin-right: auto;
     display: block;
@@ -555,7 +552,7 @@ input:focus{
 }
 
 .upload_loaded {
-    background-color: black;
+    background-color: #00000046;
     border: none;
 }
 

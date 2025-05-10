@@ -33,26 +33,47 @@
 }
 
 .title{
-    font-size: 20px;
+    font-size: 21px;
     font-weight: 500;
 }
 
+.card-container {
+    white-space: nowrap;
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+    display: flex;
+    scroll-behavior: smooth;
+  }
+
+  .card-container > * {
+    scroll-snap-align: start;
+    flex: 0 0 auto;
+  }
+
 .card{
-    display: grid;
+    display: inline-block;
     position: relative;
     overflow: hidden;
     border-radius: 15px;
     height: 230px;
     width: 370px;
     background-color: white;
+    white-space: nowrap;
+    margin-right: 10px
+
 }
 
-.background{
+.background {
     width: 100%;
     height: 100%;
 }
 
-.id_bottom{
+.background_prawo {
+    width: 100%;
+    height: 150%;
+}
+
+.id_bottom {
     position: absolute;
     width: 100%;
     background-color: white;
@@ -63,22 +84,24 @@
     grid-template-columns: 50% 50%;
 }
 
-.name{
+.name {
     margin-left: 20px;
     height: max-content;
     margin-top: auto;
     margin-bottom: auto;
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 600;
 }
 
-.human{
+.human, .wheel {
     position: absolute;
-    top: 28px;
-    left: 28px;
+    top: 26px;
+    left: 26px;
+    height: 33px;
+    width: auto;
 }
 
-.arrow{
+.arrow {
     margin-top: auto;
     margin-bottom: auto;
     margin-right: 15px !important;
@@ -116,7 +139,7 @@
 }
 
 .service_box_icon{
-    width: 40px;
+    width: 48px;
     background-color: white;
     border-radius: 20px;
     padding: 20px;
